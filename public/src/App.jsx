@@ -1,13 +1,37 @@
-import { Header, Text } from './App.styles';
+import { createSignal, onCleanup } from "solid-js";
+import { Header, Text, LanguageSelect } from './App.styles';
 import IconsBar from './components/IconsBar';
 import Layout from './components/Layout';
+import { languages } from './languages';
+import Stats from "./components/Stats";
 
 function App() {
+  const [language, setLanguage] = createSignal("en");
+  const [translatedText, setTranslatedText] = createSignal(languages[language()]);
+  const [selectedYear, setSelectedYear] = createSignal(2023);
+
+  const handleLanguageChange = (e) => {
+    setLanguage(e.target.value);
+    setTranslatedText(languages[e.target.value]);
+  };
+
+  function parseHTML(htmlString) {
+    return { innerHTML: htmlString };
+  }
+
   return (
     <Layout>
-      <Header>koshelev.works</Header>
+      <Header>
+        koshelev.works
+        <LanguageSelect onChange={handleLanguageChange}>
+          <option value="en">EN</option>
+          <option value="de">DE</option>
+          <option value="ru">RU</option>
+        </LanguageSelect>
+      </Header>
       <IconsBar />
-      <Text>hi! i am denis and this is my website. i do here the most random stuff that my mind came up with just for fun.</Text>
+      <Text {...parseHTML(translatedText().text)}></Text>
+      <Stats year={selectedYear()} onYearChange={setSelectedYear} />
     </Layout>
   );
 }
