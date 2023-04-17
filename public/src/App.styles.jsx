@@ -1,21 +1,37 @@
 import { styled } from "solid-styled-components";
+import Layout from "./components/Layout";
 
 export const Header = styled("div")`
   font-family: "Didact Gothic";
-  font-size: 64px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px; // Added padding on the left and right
+
+  .mobile & {
+    font-size: 40px;
+    padding: 0 10px;
+  }
+
+  .desktop & {
+    font-size: 64px;
+    padding: 0 20px;
+  }
 `;
 
 export const Text = styled("div")`
   font-family: 'Didact Gothic';
-  font-size: 20px;
   max-width: 400px;
   text-align: center;
+
+  .mobile & {
+    font-size: 18px;
+  }
+
+  .desktop & {
+    font-size: 20px;
+  }
 `;
 
 export const LanguageSelect = styled("select")`
