@@ -8,6 +8,8 @@ export const languages = {
       { id: 3, title: "Kafka on the Shore - Haruki Murakami", dateFinished: "21.03.2023" },
       { id: 4, title: "Unfaithfulness - Marina Trawkova", dateFinished: "26.03.2023" },
       { id: 5, title: "Great Expectations - Charles Dickens (Dropped)", dateFinished: "17.04.2023" },
+      { id: 6, title: "Do Androids Dream of Electric Sheep? - Philip K. Dick", dateFinished: "21.04.2023" },
+      { id: 7, title: "A Clockwork Orange - Anthony Burgess", dateFinished: "Currently reading" },
     ]
   },
   de: {
@@ -19,6 +21,7 @@ export const languages = {
       { id: 3, title: "Kafka am Strand - Haruki Murakami", dateFinished: "21.03.2023" },
       { id: 4, title: "Untreue - Marina Trawkova", dateFinished: "26.03.2023" },
       { id: 5, title: "Große Erwartungen - Charles Dickens (Dropped)", dateFinished: "17.04.2023" },
+      { id: 6, title: "Uhrwerk Orange - Anthony Burgess", dateFinished: "Lese grade" },
     ]
   },
   ru: {
@@ -30,6 +33,8 @@ export const languages = {
       { id: 3, title: "Кафка на пляже - Харуки Мураками", dateFinished: "21.03.2023" },
       { id: 4, title: "Неверность - Марина Травкова", dateFinished: "26.03.2023" },
       { id: 5, title: "Большие надежды - Чарльз Диккенс (Дропнул)", dateFinished: "17.04.2023" },
+      { id: 6, title: "Мечтают ли андроиды об электроовцах? - Филип Дик", dateFinished: "21.04.2023" },
+      { id: 6, title: "Заводной апельсин - Энтони Бёрджесс", dateFinished: "Сейчас читаю" },
     ]
   },
 };

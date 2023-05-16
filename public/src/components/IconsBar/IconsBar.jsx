@@ -1,4 +1,4 @@
-import { Bar, Icon, Telegram, Github, Linkedin, Cv } from "./IconsBar.styles"
+import { Bar, Icon, Telegram, Github, Linkedin, Cv, Blog } from "./IconsBar.styles"
 
 const IconsBar = () => {
     return (
@@ -14,6 +14,9 @@ const IconsBar = () => {
         </Icon>
         <Icon onClick={() => window.open('/cv-work-2024.pdf')}>
           <Cv />
+        </Icon>
+        <Icon onClick={() => window.open('https://teletype.in/@koshelev')}>
+          <Blog />
         </Icon>
       </Bar>
     )
