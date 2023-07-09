@@ -12,3 +12,8 @@ export const YearDropdown = styled("select")`
   appearance: none;
   text-decoration: underline;
 `;
+
+export const Title = styled("div")`
+  font-weight: bold;
+  font-size: 18px;
+`;

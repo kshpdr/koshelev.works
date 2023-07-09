@@ -1,7 +1,7 @@
 import { createSignal } from "solid-js";
 import { languages } from "../../languages";
 import { useContext } from "solid-js";
-import { YearDropdown } from "./Stats.styles";
+import { YearDropdown, Title } from "./Stats.styles";
 import LanguageContext from "../../context/LanguageContext";
 import Modal from "../Modal";
 
@@ -45,7 +45,7 @@ function Stats({ year, onYearChange }) {
           <option value="2023">2023</option>
         </YearDropdown>
       </h2>
-      <h3>Books</h3>
+      <Title>Books</Title>
       <ul>
         {languages[language()].books.map((book) => (
           <li key={book.id}>
@@ -53,7 +53,7 @@ function Stats({ year, onYearChange }) {
           </li>
         ))}
       </ul>
-      <h3>Films</h3>
+      <Title>Films</Title>
       {/* <ul>
         {films.map((film) => (
           <li key={film.id} onClick={() => handleFilmClick(film)}>

@@ -10,7 +10,8 @@ export const languages = {
       { id: 5, title: "Great Expectations - Charles Dickens (Dropped)", dateFinished: "17.04.2023" },
       { id: 6, title: "Do Androids Dream of Electric Sheep? - Philip K. Dick", dateFinished: "21.04.2023" },
       { id: 7, title: "A Clockwork Orange - Anthony Burgess", dateFinished: "15.05.2023" },
-      { id: 8, title: "Come As You Are - Emily Nagoski", dateFinished: "Currently reading" },
+      { id: 8, title: "Come As You Are - Emily Nagoski", dateFinished: "28.06.2023" },
+      { id: 8, title: "The Man Who Mistook His Wife for a Hat - Oliver Sacks", dateFinished: "Currently reading" },
     ]
   },
   de: {
@@ -24,7 +25,8 @@ export const languages = {
       { id: 5, title: "Große Erwartungen - Charles Dickens (Dropped)", dateFinished: "17.04.2023" },
       { id: 6, title: "Do Androids Dream of Electric Sheep? - Philip K. Dick", dateFinished: "21.04.2023" },
       { id: 7, title: "Uhrwerk Orange - Anthony Burgess", dateFinished: "15.05.2023" },
-      { id: 8, title: "Komm, wie du willst - Emily Nagoski", dateFinished: "Currently reading" },
+      { id: 8, title: "Komm, wie du willst - Emily Nagoski", dateFinished: "28.06.2023" },
+      { id: 9, title: "Der Mann, der seine Frau mit einem Hut verwechselte - Oliver Sacks", dateFinished: "Lese jetzt" },
     ]
   },
   ru: {
@@ -38,7 +40,8 @@ export const languages = {
       { id: 5, title: "Большие надежды - Чарльз Диккенс (Дропнул)", dateFinished: "17.04.2023" },
       { id: 6, title: "Мечтают ли андроиды об электроовцах? - Филип Дик", dateFinished: "21.04.2023" },
       { id: 7, title: "Заводной апельсин - Энтони Бёрджесс", dateFinished: "15.05.2023" },
-      { id: 8, title: "Как хочет женщина - Эмили Наговски", dateFinished: "Сейчас читаю" },
+      { id: 8, title: "Как хочет женщина - Эмили Наговски", dateFinished: "28.06.2023" },
+      { id: 9, title: "Человек, который принял жену за шляпу - Оливер Сакс", dateFinished: "Сейчас читаю" },
     ]
   },
 };
