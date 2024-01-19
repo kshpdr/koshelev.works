@@ -1,0 +1,67 @@
+baseURL = 'https://koshelev.works/'
+languageCode = 'en-us'
+title = 'koshelev.works'
+theme = 'paper-mod'
+
+[[params.socialIcons]]
+name = "Telegram"
+url = "https://t.me/kshpdr"
+
+[[params.socialIcons]]
+name = "Github"
+url = "https://github.com/kshpdr"
+
+[[params.socialIcons]]
+name = "Linkedin"
+url = "https://www.linkedin.com/in/koshelev-denis/"
+
+[[params.socialIcons]]
+name = "CV"
+url = "https://koshelev.works/cv.pdf"
+
+[languages.en]
+languageName = "English"
+weight = 1
+[languages.en.params.homeInfoParams]
+Title = "I am Denis and..."
+Content = "I love working. That's why koshelev.works. This is my last name, by the way. I'll post here whatever I find interesting. You can find me on other plaforms too. However, I mainly use Telegram and Email. I am creating the biggest [russian-speaking community around the TU Berlin](https://tuberlin.ru). From time to time I contribute to open-source projects that I find interesting."
+[[languages.en.menu.main]]
+identifier = "reading"
+name = "reading"
+url = "/and-reads/"
+weight = 10
+
+[languages.de]
+languageName = "Deutsch"
+weight = 2
+[languages.de.params.homeInfoParams]
+Title = "Ich bin Denis und..."
+Content = "Ich arbeite gern. Deswegen koshelev.works. Das ist mein Nachname. Ich schreibe hier alles, was ich interessant find. Ich bin auch auf anderen Plattformen. Hauptsächlich nutze ich Telegram und E-Mail. Ich baue die [größten russischsprachigen Gemeinschaft rund um die TU Berlin](https://tuberlin.ru) auf. Von Zeit zu Zeit trage ich zu Open-Source-Projekten bei, die ich interessant finde."
+[[languages.de.menu.main]]
+identifier = "reading"
+name = "lese"
+url = "/and-reads/"
+weight = 10
+
+[languages.ru]
+languageName = "Russian"
+weight = 3
+[languages.ru.params.homeInfoParams]
+Title = "Я Денис и..."
+Content = "Я люблю работать. Поэтому koshelev.works. Это моя фамилия. Сюда я пишу обо всем, что мне показалось интересным. Другие соцсеточки по ссылкам. В основном, проверяю телегу и мыло. Делаю крупнейшее [русскоговорящего коммьюнити вокруг ТУ Берлина](https://tuberlin.ru). Время от времени контрибьючу в open-source."
+[[languages.ru.menu.main]]
+identifier = "reading"
+name = "читаю"
+url = "/and-reads/"
+weight = 10
+[[languages.ru.menu.main]]
+identifier = "blog"
+name = "блог"
+url = "https://teletype.in/@koshelev"
+weight = 30
+
+[[languages.ru.menu.main]]
+identifier = "microblog"
+name = "микроблог"
+url = "https://t.me/pensamensa"
+weight = 30
