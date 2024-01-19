@@ -23,4 +23,4 @@ I love reading. I do it mostly before going to sleep or while on the bus. I choo
 - **30.12.2023:** *The Hitchhiker's Guide to the Galaxy* - Douglas Adams
 
 ### 2024
-- **Jetzt:** *Generation "П"* - Wiktor Pelewin
+- **Now:** *Generation "П"* - Wiktor Pelewin
