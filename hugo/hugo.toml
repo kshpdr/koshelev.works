@@ -41,8 +41,15 @@ During my bachelor studies, I had the pleasure of working at [Check24](https://c
 ‎
 
 I'll post here whatever I find interesting. You can find me on other plaforms too. However, I mainly use Telegram and Email. I am creating the biggest [russian-speaking community around the TU Berlin](https://tuberlin.ru). From time to time I contribute to open-source projects that I find interesting."""
+
 [[languages.en.menu.main]]
 identifier = "reading"
 name = "reading"
 url = "/and-reads/"
+weight = 10
+
+[[languages.en.menu.main]]
+identifier = "projects"
+name = "projects"
+url = "/and-creates/"
 weight = 10

@@ -40,7 +40,7 @@ This project is a collection of algorithms and heuristics for solving the [Verte
 
 --- 
 
-### [Findbotel](https://github.com/kshpdr/find-botel)
+### [Findbotel](https://github.com/kshpdr/findbotel)
 
 {{< image-and-text image="/project-5.jpeg" width="160" alt="SVF-Based Reachability Analysis" >}}
 This project was implemented within two weeks as part of the application for the [GenDev scholarship](https://www.talents.check24.de/en/gendev) for talented computer science students. It is a Telegram bot that enables users to find and directly book package tours within the messenger. The project includes optimized search over a large dataset (15GB+, 100+ million entries), payment integration, and pagination development.
