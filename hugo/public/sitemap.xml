@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>https://koshelev.works/en/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://koshelev.works/de/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://koshelev.works/ru/sitemap.xml</loc>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://koshelev.works/categories/</loc>
+  </url><url>
+    <loc>https://koshelev.works/</loc>
+  </url><url>
+    <loc>https://koshelev.works/and-reads/</loc>
+  </url><url>
+    <loc>https://koshelev.works/tags/</loc>
+  </url>
+</urlset>
