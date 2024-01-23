@@ -8,6 +8,10 @@ name = "Telegram"
 url = "https://t.me/kshpdr"
 
 [[params.socialIcons]]
+name = "Email"
+url = "mailto:koshelev@gatech.edu"
+
+[[params.socialIcons]]
 name = "Github"
 url = "https://github.com/kshpdr"
 
@@ -40,7 +44,12 @@ During my bachelor studies, I had the pleasure of working at [Check24](https://c
 
 ‎
 
-I'll post here whatever I find interesting. You can find me on other plaforms too. However, I mainly use Telegram and Email. I am creating the biggest [russian-speaking community around the TU Berlin](https://tuberlin.ru). From time to time I contribute to open-source projects that I find interesting."""
+I'll post here whatever I find interesting. You can find me on other plaforms too. However, I mainly use Telegram and Email. I am creating the biggest [russian-speaking community around the TU Berlin](https://tuberlin.ru). From time to time I contribute to open-source projects that I find interesting.
+
+‎
+
+Here is my [CV](https://koshelev.works/cv.pdf).
+"""
 
 [[languages.en.menu.main]]
 identifier = "reading"
