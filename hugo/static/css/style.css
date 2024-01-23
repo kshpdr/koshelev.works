@@ -1,0 +1,12 @@
+.image-text-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.project-image {
+    margin-right: 20px; 
+}
+
+.project-description {
+    flex: 1;
+}
