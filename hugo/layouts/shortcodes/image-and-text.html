@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/css/style.css">
+<div class="image-text-container">
+    <div class="project-image">
+        <img src="{{ .Get "image" }}" width="{{ .Get "width" }}" alt="{{ .Get "alt" }}">
+    </div>
+    <div class="project-description">
+        {{ .Inner | markdownify }}
+    </div>
+</div>
