@@ -6,7 +6,8 @@ summary: reading
 I love reading. I do it mostly before going to sleep or while on the bus. I choose books quite randomly, as I find it more interesting that way. So far, I enjoy Murakami the most.
 
 ### 2024
-- **Currently Reading:** *Generation "П"* by Wiktor Pelewin
+- **Currently Reading:** *A Tale for the Time Being* by Ruth Ozeki
+- **January 26:** *Generation "П"* by Wiktor Pelewin
 
 ### 2023
 - **December 30:** *The Hitchhiker's Guide to the Galaxy* by Douglas Adams
