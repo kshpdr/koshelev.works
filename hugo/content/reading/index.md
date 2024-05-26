@@ -7,7 +7,7 @@ I love reading. I do it mostly before going to sleep or while on the bus. I choo
 
 ### 2024
 - **Currently Reading:** *A Tale for the Time Being* by Ruth Ozeki
-- **May 3:**: *Anti-Karnegi* by Everett L. Shostrom
+- **May 3:** *Anti-Karnegi* by Everett L. Shostrom
 - **January 26:** *Generation "П"* by Wiktor Pelewin
 
 ### 2023

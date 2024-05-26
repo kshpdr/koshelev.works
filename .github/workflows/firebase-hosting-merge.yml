@@ -21,3 +21,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KOSHELEV_WORKS }}'
           channelId: live
           projectId: koshelev-works
+          public: public
