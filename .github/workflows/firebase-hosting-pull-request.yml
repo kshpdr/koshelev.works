@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install Hugo
         run: |
-          sudo apt-get update
-          sudo apt-get install -y hugo
+          wget https://github.com/gohugoio/hugo/releases/download/v0.120.4/hugo_extended_0.120.4_Linux-64bit.deb
+          sudo dpkg -i hugo_extended_0.120.4_Linux-64bit.deb 
       - run: cd hugo && hugo --config hugo.toml
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
