@@ -10,4 +10,4 @@ jobs:
     - uses: kshpdr/action-hugo-firebase-deploy@master
       with:
         firebase-token: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KOSHELEV_WORKS }}
-        hugo-params: -D 
+        hugo-params: -D --config hugo.toml
