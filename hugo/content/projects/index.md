@@ -4,6 +4,23 @@ url: "/and-creates/"
 summary: projects
 ---
 
+### [DISCO -- LLVM pass for detecting string formatting issues](https://github.com/davis-matthew/DISCO)
+
+{{< image-and-text image="/llvm-pass.png" alt="pfind" >}}
+DISCO is a dependently typed string and runtime LLVM compiler pass that detects string formatting issues, such as typos. Whenever a string deviates from the expected pattern, the runtime will identify this as a mismatch. This helps reduce usability issues arising from cultural variations in input and output validation.
+
+Here is the [paper](https://github.com/davis-matthew/DISCO/blob/main/assets/final-report.pdf) with more details.
+{{< /image-and-text >}}
+
+### [pfind -- Parallel Implementantion of Linux find command](https://github.com/kshpdr/pfind)
+
+{{< image-and-text image="/pfind.png" alt="pfind" >}}
+In this project, we developed a parallel implementation of the `find` command using OpenMP. We also implemented a sequential version of the `find` command for comparison purposes, benchmarked our parallel implementation against the sequential one, and evaluated the performance difference.
+
+Here is the [paper](https://github.com/kshpdr/pfind/blob/main/paper.pdf) and [presentation slides](https://github.com/kshpdr/pfind/blob/main/presentation.pdf) with more details.
+{{< /image-and-text >}}
+
+
 ### [SVF-Based Reachability Analysis in LLVM IR](https://github.com/kshpdr/reachability-analysis)
 
 {{< image-and-text image="/project-1.png" alt="SVF-Based Reachability Analysis" >}}
