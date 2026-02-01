@@ -19,10 +19,26 @@
             line-height: 1.6;
             padding: 24px;
             padding-bottom: 120px;
+            overflow-x: hidden;
         }
 
         main {
             max-width: 440px;
+        }
+
+        .depth-counter {
+            font-size: 11px;
+            color: #ccc;
+            font-family: monospace;
+            margin-bottom: 8px;
+            opacity: 0;
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+
+        .depth-counter.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         header {
@@ -61,10 +77,98 @@
         a {
             color: inherit;
         }
+
+        .recursive-link {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+        }
+
+        .recursive-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: currentColor;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .recursive-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Zoom animation overlay */
+        .zoom-overlay {
+            position: fixed;
+            inset: 0;
+            background: #fff;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .zoom-overlay.active {
+            animation: flashIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes flashIn {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Page zoom effect */
+        main {
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                        opacity 0.4s ease;
+        }
+
+        main.zooming {
+            opacity: 0;
+        }
+
+        main.zoom-in {
+            animation: zoomToLink 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        main.zoom-out {
+            animation: zoomFromSmall 0.5s cubic-bezier(0, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes zoomToLink {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(8);
+                opacity: 0;
+            }
+        }
+
+        @keyframes zoomFromSmall {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
-    <main>
+    <div class="zoom-overlay" id="zoomOverlay"></div>
+
+    <main id="main">
+        <div class="depth-counter" id="depthCounter">depth 0</div>
+        
         <header>
             <span class="title">koshelev.works</span>
             <span class="sep">/</span>
@@ -75,7 +179,7 @@
             <a href="/and-writes">blog</a>
         </header>
 
-        <p>I love working. That's why  <a href="https://koshelev.works">koshelev.works</a>. This is my last name, by the way. It's like a coin pouch in a game where you pick up little coins and figure out fun ways to use them — not real money, but some kind of multi-dimensional currency.</p>
+        <p>I love working. That's why <a class="recursive-link" id="recursiveLink">koshelev.works</a>. This is my last name, by the way. It's like a coin pouch in a game where you pick up little coins and figure out fun ways to use them — not real money, but some kind of multi-dimensional currency.</p>
 
         <p>Ideally, it'd be cool to have nis.de as domain. But evil Telekom doesn't want to share. We'll wait until the pouch gets big enough.</p>
 
@@ -89,5 +193,88 @@
 
         <p class="muted"><a href="https://github.com/kshpdr">github</a> · <a href="https://www.linkedin.com/in/deniskoshelev/">linkedin</a> · SF Bay Area</p>
     </main>
+
+    <script>
+        const link = document.getElementById('recursiveLink');
+        const main = document.getElementById('main');
+        const overlay = document.getElementById('zoomOverlay');
+        const counter = document.getElementById('depthCounter');
+        
+        // Get depth from URL
+        const params = new URLSearchParams(window.location.search);
+        let depth = parseInt(params.get('d') || '0');
+        
+        // Show counter if depth > 0
+        if (depth > 0) {
+            counter.textContent = `depth ${depth}`;
+            counter.classList.add('visible');
+            // Zoom in animation on page load
+            main.classList.add('zoom-out');
+        }
+
+        let isAnimating = false;
+
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (isAnimating) return;
+            isAnimating = true;
+
+            depth++;
+            
+            // Show counter on first click
+            counter.classList.add('visible');
+            counter.textContent = `depth ${depth}`;
+
+            // Get link position for transform origin
+            const rect = link.getBoundingClientRect();
+            const originX = rect.left + rect.width / 2;
+            const originY = rect.top + rect.height / 2;
+            main.style.transformOrigin = `${originX}px ${originY}px`;
+
+            // Zoom in
+            main.classList.add('zoom-in');
+            
+            setTimeout(() => {
+                overlay.classList.add('active');
+            }, 300);
+
+            // Reset and zoom out
+            setTimeout(() => {
+                main.classList.remove('zoom-in');
+                main.style.transform = 'scale(0.5)';
+                main.style.opacity = '0';
+                
+                // Force reflow
+                main.offsetHeight;
+                
+                main.style.transform = '';
+                main.style.opacity = '';
+                main.style.transformOrigin = '';
+                main.classList.add('zoom-out');
+                
+                overlay.classList.remove('active');
+            }, 600);
+
+            setTimeout(() => {
+                main.classList.remove('zoom-out');
+                isAnimating = false;
+                
+                // Update URL without reload
+                const newUrl = `${window.location.pathname}?d=${depth}`;
+                window.history.pushState({ depth }, '', newUrl);
+            }, 1100);
+        });
+
+        // Handle back button
+        window.addEventListener('popstate', (e) => {
+            if (e.state && typeof e.state.depth === 'number') {
+                depth = e.state.depth;
+                counter.textContent = `depth ${depth}`;
+                if (depth === 0) {
+                    counter.classList.remove('visible');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
