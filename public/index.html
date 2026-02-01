@@ -82,6 +82,8 @@
             cursor: pointer;
             position: relative;
             display: inline-block;
+            animation: gentleNudge 4s ease-in-out infinite;
+            animation-delay: 2s;
         }
 
         .recursive-link::after {
@@ -97,9 +99,28 @@
             transition: transform 0.3s ease;
         }
 
+        .recursive-link:hover {
+            animation: none;
+        }
+
         .recursive-link:hover::after {
             transform: scaleX(1);
             transform-origin: left;
+        }
+
+        @keyframes gentleNudge {
+            0%, 92%, 100% {
+                transform: translateY(0);
+            }
+            94% {
+                transform: translateY(-2px);
+            }
+            96% {
+                transform: translateY(0);
+            }
+            98% {
+                transform: translateY(-1px);
+            }
         }
 
         /* Zoom animation overlay */
