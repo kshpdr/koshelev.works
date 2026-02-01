@@ -1,6 +1,50 @@
 .image-text-container {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row; /* Stack children vertically */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.project-image {
+    flex-shrink: 0; /* Prevent the image container from shrinking */
+    margin-right: 1em; /* Add some space between the image and the text */
+}
+
+.project-image img {
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column; /* Stack description and tags vertically */
+    margin-top: 0.5em; /* Add some space above the content */
+    gap: 1em; /* Add distance between elements */
+}
+
+.chip {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    margin: 0.1em;
+    border-radius: 12px;
+    background-color: #f3f4f6;
+    font-size: 0.75em;
+    color: #1f2937;
+    border: 1px solid #d1d5db;
+}
+
+.project-tags {
+    margin-top: 0.5em; /* Add some space above the tags */
+}
+
+.chip {
+    display: inline-block;
+    padding: 0.25em 0.5em; /* Reduced padding for a smaller size */
+    margin: 0.1em; /* Smaller margin */
+    border-radius: 12px; /* Slightly smaller border-radius for a more subtle curve */
+    background-color: #f3f4f6; /* Lighter background color for a minimal look */
+    font-size: 0.75em; /* Smaller font size */
+    color: #1f2937; /* Darker text color for better contrast */
+    border: 1px solid #d1d5db; /* Adding a subtle border for definition */
 }
 
 .project-image img {

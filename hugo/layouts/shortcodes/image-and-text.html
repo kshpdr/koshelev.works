@@ -3,7 +3,16 @@
     <div class="project-image">
         <img src="{{ .Get "image" }}" width="{{ .Get "width" }}" alt="{{ .Get "alt" }}">
     </div>
-    <div class="project-description">
-        {{ .Inner | markdownify }}
+    <div class="project-content">
+        {{ if .Get "tags" }}
+        <div class="project-tags">
+            {{ range (split (.Get "tags") ",") }}
+            <span class="chip">{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+        <div class="project-description">
+            {{ .Inner | markdownify }}
+        </div>
     </div>
 </div>

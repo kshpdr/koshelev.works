@@ -3,10 +3,14 @@ title: "Reading"
 url: "/and-reads/"
 summary: reading
 ---
-I love reading. I do it mostly before going to sleep or while on the bus. I choose books quite randomly, as I find it more interesting that way. So far, I enjoy Murakami the most.
+I love reading. I do it mostly before going to sleep or ~~while on the bus~~ (when I was in Germany where people knew what buses are). I choose books quite randomly, as I find it more interesting that way. So far, I enjoy Murakami the most. 
 
 ### 2024
-- **Currently Reading:** *A Tale for the Time Being* by Ruth Ozeki
+- **Currently reading:** *The Wind-Up Bird Chronicle* by Haruki Murakami
+- **November 1:** *The Midnight Library* by Matt Haig
+- **August 19:** *It Doesn't Have to Be Crazy at Work* by Jason Fried
+- **July 11:** *The Geographer Drank His Globe Away* by Alexei Iwanow 
+- **June 13:** *A Tale for the Time Being* by Ruth Ozeki (On pause)
 - **May 3:** *Anti-Karnegi* by Everett L. Shostrom
 - **January 26:** *Generation "П"* by Wiktor Pelewin
 

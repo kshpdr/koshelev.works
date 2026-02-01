@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'koshelev.works'
 theme = 'paper-mod'
 
+[[params.disableThemeToggle]]
+
 [[params.socialIcons]]
 name = "Telegram"
 url = "https://t.me/kshpdr"
@@ -28,37 +30,60 @@ languageName = "English"
 weight = 1
 [languages.en.params.homeInfoParams]
 Title = "I am Denis and..."
-Content = """I love working. That's why koshelev.works. This is my last name, by the way. 
+Content = """I love working. That's why koshelev.works. This is my last name, by the way. It’s like a coin pouch in a game where you pick up little coins and figure out fun ways to use them — not real money, but some kind of multi-dimensional currency.
+
+‎
+
+Ideally, it'd be cool to have [_nis.de_](https://nis.de) as domain. But evil Telekom doesn't want to share. 
+
+We'll wait until the pouch gets big enough.
 
 ‎
 
 **Who am I?**
 
-I am currently studying computer science at the [Georgia Institute of Technology](https://gatech.edu) as a master's student. My current research interests include *compilers, programming languages, high-performance computing*, and the intersection of these fields with *deep learning*. I completed my bachelor's degree at the [Technical University of Berlin](https://tu.berlin), where my [bachelor thesis focused on heuristics for twin-width](https://koshelev.works/thesis.pdf), an algorithmic graph problem.
+{{< image-right-and-text image="/gt.png" alt="Georgia Tech" >}}
+I studied computer science at [Georgia Tech](https://gatech.edu) as a master's student. During my time, I was trying to optimize for academic fun taking the most exciting classes I could find. Most of them were around _high-performance computing, compilers, and programming languages_, and the intersection of these fields with _deep learning_.
+{{< /image-right-and-text >}}
 
 ‎
+
+{{< image-right-and-text image="/tub.png" alt="TU Berlin" >}}
+Before this, I got my bachelor's degree at the [Technical University of Berlin](https://tu.berlin), where my [bachelor thesis focused on heuristics for twin-width](https://koshelev.works/thesis.pdf), an algorithmic graph problem. Good old times where you had to get cs degree without all fancy LLMs. But now it's even more exciting.
+{{< /image-right-and-text >}}
 
 **Work Experience**
 
+{{< image-right-and-text image="/aws.svg" alt="AWS" >}}
+During my summer internship at AWS, I worked as a Software Development Engineer intern within the Hardware Engineering Services team. My primary focus was on developing a system to collect and analyze telemetry data, aimed at detecting hardware failures. 
+{{< /image-right-and-text >}}
+
+‎
+
+{{< image-right-and-text image="/c24.png" alt="Check24" >}}
 During my bachelor studies, I had the pleasure of working at [Check24](https://check24.de), the largest comparison portal in Germany, as a Software Engineer. Prior to that, I was involved with the [Fraunhofer Institute](https://www.fraunhofer.de/en.html), the largest applied research organization in Europe.
+{{< /image-right-and-text >}}
+
 
 ‎
 
-I'll post here whatever I find interesting. You can find me on other plaforms too. However, I mainly use Telegram and Email. I am creating the biggest [russian-speaking community around the TU Berlin](https://tuberlin.ru). From time to time I contribute to open-source projects that I find interesting.
-
-‎
-
-Here is my [CV](https://koshelev.works/cv.pdf).
+You can find me online on the following platforms:
 """
 
 [[languages.en.menu.main]]
 identifier = "reading"
-name = "reading"
+name = " reading"
 url = "/and-reads/"
 weight = 10
 
 [[languages.en.menu.main]]
+identifier = "cv"
+name = "cv"
+url = "/cv.pdf"
+weight = 10
+
+[[languages.en.menu.main]]
 identifier = "projects"
-name = "projects"
+name = " projects"
 url = "/and-creates/"
 weight = 10

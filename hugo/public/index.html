@@ -82,11 +82,7 @@
 
 <body class="list" id="top">
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -97,37 +93,22 @@
         <div class="logo">
             <a href="https://koshelev.works/" accesskey="h" title="koshelev.works (Alt + H)">koshelev.works</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="https://koshelev.works/and-creates/" title="projects">
-                    <span>projects</span>
+                <a href="https://koshelev.works/and-creates/" title=" projects">
+                    <span> projects</span>
                 </a>
             </li>
             <li>
-                <a href="https://koshelev.works/and-reads/" title="reading">
-                    <span>reading</span>
+                <a href="https://koshelev.works/and-reads/" title=" reading">
+                    <span> reading</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://koshelev.works/cv.pdf" title="cv">
+                    <span>cv</span>
                 </a>
             </li>
         </ul>
@@ -142,14 +123,51 @@
         <p>I love working. That&rsquo;s why koshelev.works. This is my last name, by the way.</p>
 <p>‎</p>
 <p><strong>Who am I?</strong></p>
-<p>I am currently studying computer science at the <a href="https://gatech.edu">Georgia Institute of Technology</a> as a master&rsquo;s student. My current research interests include <em>compilers, programming languages, high-performance computing</em>, and the intersection of these fields with <em>deep learning</em>. I completed my bachelor&rsquo;s degree at the <a href="https://tu.berlin">Technical University of Berlin</a>, where my <a href="https://koshelev.works/thesis.pdf">bachelor thesis focused on heuristics for twin-width</a>, an algorithmic graph problem.</p>
+<link rel="stylesheet" href="/css/style.css">
+<div class="image-text-container">
+    <div class="project-description">
+        I am currently studying computer science at the <a href="https://gatech.edu">Georgia Institute of Technology</a> as a master&rsquo;s student. My current research interests include <em>high-performance computing, compilers, and programming languages</em>, and the intersection of these fields with <em>deep learning</em>.
+    </div>
+    <div class="project-image">
+        <img src="/gt.png" width="" alt="Georgia Tech">
+    </div>
+</div>
+
 <p>‎</p>
+<link rel="stylesheet" href="/css/style.css">
+<div class="image-text-container">
+    <div class="project-description">
+        I completed my bachelor&rsquo;s degree at the <a href="https://tu.berlin">Technical University of Berlin</a>, where my <a href="https://koshelev.works/thesis.pdf">bachelor thesis focused on heuristics for twin-width</a>, an algorithmic graph problem.
+    </div>
+    <div class="project-image">
+        <img src="/tub.png" width="" alt="TU Berlin">
+    </div>
+</div>
+
 <p><strong>Work Experience</strong></p>
-<p>During my bachelor studies, I had the pleasure of working at <a href="https://check24.de">Check24</a>, the largest comparison portal in Germany, as a Software Engineer. Prior to that, I was involved with the <a href="https://www.fraunhofer.de/en.html">Fraunhofer Institute</a>, the largest applied research organization in Europe.</p>
+<link rel="stylesheet" href="/css/style.css">
+<div class="image-text-container">
+    <div class="project-description">
+        During my summer internship at AWS, I worked as a Software Development Engineer intern within the Hardware Engineering Services team. My primary focus was on developing a system to collect and analyze telemetry data, aimed at detecting hardware failures.
+    </div>
+    <div class="project-image">
+        <img src="/aws.svg" width="" alt="AWS">
+    </div>
+</div>
+
 <p>‎</p>
-<p>I&rsquo;ll post here whatever I find interesting. You can find me on other plaforms too. However, I mainly use Telegram and Email. I am creating the biggest <a href="https://tuberlin.ru">russian-speaking community around the TU Berlin</a>. From time to time I contribute to open-source projects that I find interesting.</p>
+<link rel="stylesheet" href="/css/style.css">
+<div class="image-text-container">
+    <div class="project-description">
+        During my bachelor studies, I had the pleasure of working at <a href="https://check24.de">Check24</a>, the largest comparison portal in Germany, as a Software Engineer. Prior to that, I was involved with the <a href="https://www.fraunhofer.de/en.html">Fraunhofer Institute</a>, the largest applied research organization in Europe.
+    </div>
+    <div class="project-image">
+        <img src="/c24.png" width="" alt="Check24">
+    </div>
+</div>
+
 <p>‎</p>
-<p>Here is my <a href="https://koshelev.works/cv.pdf">CV</a>.</p>
+<p>You can find me online on the following platforms:</p>
 
     </div>
     <footer class="entry-footer">
@@ -254,18 +272,6 @@
             mybutton.style.opacity = "0";
         }
     };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
 
 </script>
 </body>

@@ -4,6 +4,14 @@ url: "/and-creates/"
 summary: projects
 ---
 
+### [howisgt.life -- A mood-meter on Georgia Tech campus.](https://howisgt.life)
+
+{{< image-and-text image="/hot.png" alt="pfind" tags="AI, Hackathon, Sentiment Analysis" >}}
+Project made within 10 hours for AI ATL hackathon. People think that Georgia Tech is a great place. And it is indeed! However, nobody talks about the dark side of GT... Depression, anxiety, dining halls. Nobody except Reddit! So we use sentiment analysis to create a campus-wide mood-meter. 
+
+Here is the [DevPost](https://devpost.com/software/howisgt-life) with more details.
+{{< /image-and-text >}}
+
 ### [DISCO -- LLVM pass for detecting string formatting issues](https://github.com/davis-matthew/DISCO)
 
 {{< image-and-text image="/llvm-pass.png" alt="pfind" >}}

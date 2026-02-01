@@ -92,8 +92,8 @@
   "keywords": [
     
   ],
-  "articleBody": "SVF-Based Reachability Analysis in LLVM IR In this project, we developed a tool for static reachability analysis using the SVF framework and LLVM IR. We analyze LLVM IR files to statically determine if a function call src() can reach another function call sink(). We generate an interprocedural control-flow graph (ICFG) of a program, which maps control instructions from program entry to exit, and use it for eliminating dead code. Heuristic Solver for Twin-Width In my undergraduate thesis, I investigated various methods for effectively addressing the Twin-Width problem. I created several heuristics along with a dedicated solver, conducted performance benchmarks on them, and assessed the outcomes by examining how these heuristics performed across diverse graph types.\nHere are the slides from the defense presentation.\nFederated Marketplaces As part of the Distributed System Prototyping class at TU Berlin, we developed a prototype for a federated marketplace. This is akin to Mastodon but in the Amazon world. I developed multiple components allowing shops based on microservice architecture to easily integrate our solution and collaborate with other shops.\nHere are the slides from the final presentation.\nVertex Cover Solver This project is a collection of algorithms and heuristics for solving the Vertex Cover problem. We explored and implemented state-of-the-art approaches of solving vertex cover, including reduction rules, branch-and-reduce algorithm with packing constraints and automated parameter optimization techniques with parallel algorithm configuration. Findbotel This project was implemented within two weeks as part of the application for the GenDev scholarship for talented computer science students. It is a Telegram bot that enables users to find and directly book package tours within the messenger. The project includes optimized search over a large dataset (15GB+, 100+ million entries), payment integration, and pagination development. MTS This Telegram bot represents the module catalogue at the Technical University of Berlin. Since finding any module required more than 5 clicks, I decided to port it to the messenger to make life easier. This project includes the implementation of a parser, pagination, and a custom review system for the classes. ",
-  "wordCount" : "337",
+  "articleBody": "howisgt.life – A mood-meter on Georgia Tech campus. Project made within 10 hours for AI ATL hackathon. People think that Georgia Tech is a great place. And it is indeed! However, nobody talks about the dark side of GT… Depression, anxiety, dining halls. Nobody except Reddit! So we use sentiment analysis to create a campus-wide mood-meter.\nHere is the DevPost with more details.\nDISCO – LLVM pass for detecting string formatting issues DISCO is a dependently typed string and runtime LLVM compiler pass that detects string formatting issues, such as typos. Whenever a string deviates from the expected pattern, the runtime will identify this as a mismatch. This helps reduce usability issues arising from cultural variations in input and output validation.\nHere is the paper with more details.\npfind – Parallel Implementantion of Linux find command In this project, we developed a parallel implementation of the find command using OpenMP. We also implemented a sequential version of the find command for comparison purposes, benchmarked our parallel implementation against the sequential one, and evaluated the performance difference.\nHere is the paper and presentation slides with more details.\nSVF-Based Reachability Analysis in LLVM IR In this project, we developed a tool for static reachability analysis using the SVF framework and LLVM IR. We analyze LLVM IR files to statically determine if a function call src() can reach another function call sink(). We generate an interprocedural control-flow graph (ICFG) of a program, which maps control instructions from program entry to exit, and use it for eliminating dead code. Heuristic Solver for Twin-Width In my undergraduate thesis, I investigated various methods for effectively addressing the Twin-Width problem. I created several heuristics along with a dedicated solver, conducted performance benchmarks on them, and assessed the outcomes by examining how these heuristics performed across diverse graph types.\nHere are the slides from the defense presentation.\nFederated Marketplaces As part of the Distributed System Prototyping class at TU Berlin, we developed a prototype for a federated marketplace. This is akin to Mastodon but in the Amazon world. I developed multiple components allowing shops based on microservice architecture to easily integrate our solution and collaborate with other shops.\nHere are the slides from the final presentation.\nVertex Cover Solver This project is a collection of algorithms and heuristics for solving the Vertex Cover problem. We explored and implemented state-of-the-art approaches of solving vertex cover, including reduction rules, branch-and-reduce algorithm with packing constraints and automated parameter optimization techniques with parallel algorithm configuration. Findbotel This project was implemented within two weeks as part of the application for the GenDev scholarship for talented computer science students. It is a Telegram bot that enables users to find and directly book package tours within the messenger. The project includes optimized search over a large dataset (15GB+, 100+ million entries), payment integration, and pagination development. MTS This Telegram bot represents the module catalogue at the Technical University of Berlin. Since finding any module required more than 5 clicks, I decided to port it to the messenger to make life easier. This project includes the implementation of a parser, pagination, and a custom review system for the classes. ",
+  "wordCount" : "523",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -115,11 +115,7 @@
 
 <body class="" id="top">
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -130,37 +126,22 @@
         <div class="logo">
             <a href="https://koshelev.works/" accesskey="h" title="koshelev.works (Alt + H)">koshelev.works</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="https://koshelev.works/and-creates/" title="projects">
-                    <span class="active">projects</span>
+                <a href="https://koshelev.works/and-creates/" title=" projects">
+                    <span class="active"> projects</span>
                 </a>
             </li>
             <li>
-                <a href="https://koshelev.works/and-reads/" title="reading">
-                    <span>reading</span>
+                <a href="https://koshelev.works/and-reads/" title=" reading">
+                    <span> reading</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://koshelev.works/cv.pdf" title="cv">
+                    <span>cv</span>
                 </a>
             </li>
         </ul>
@@ -178,7 +159,46 @@
 
 </div>
   </header> 
-  <div class="post-content"><h3 id="svf-based-reachability-analysis-in-llvm-irhttpsgithubcomkshpdrreachability-analysis"><a href="https://github.com/kshpdr/reachability-analysis">SVF-Based Reachability Analysis in LLVM IR</a><a hidden class="anchor" aria-hidden="true" href="#svf-based-reachability-analysis-in-llvm-irhttpsgithubcomkshpdrreachability-analysis">#</a></h3>
+  <div class="post-content"><h3 id="howisgtlife----a-mood-meter-on-georgia-tech-campushttpshowisgtlife"><a href="https://howisgt.life">howisgt.life &ndash; A mood-meter on Georgia Tech campus.</a><a hidden class="anchor" aria-hidden="true" href="#howisgtlife----a-mood-meter-on-georgia-tech-campushttpshowisgtlife">#</a></h3>
+<link rel="stylesheet" href="/css/style.css">
+<div class="image-text-container">
+    <div class="project-image">
+        <img src="/hot.png" width="" alt="pfind">
+    </div>
+    <div class="project-description">
+        <p>Project made within 10 hours for AI ATL hackathon. People think that Georgia Tech is a great place. And it is indeed! However, nobody talks about the dark side of GT&hellip; Depression, anxiety, dining halls. Nobody except Reddit! So we use sentiment analysis to create a campus-wide mood-meter.</p>
+<p>Here is the <a href="https://devpost.com/software/howisgt-life">DevPost</a> with more details.</p>
+
+    </div>
+</div>
+
+<h3 id="disco----llvm-pass-for-detecting-string-formatting-issueshttpsgithubcomdavis-matthewdisco"><a href="https://github.com/davis-matthew/DISCO">DISCO &ndash; LLVM pass for detecting string formatting issues</a><a hidden class="anchor" aria-hidden="true" href="#disco----llvm-pass-for-detecting-string-formatting-issueshttpsgithubcomdavis-matthewdisco">#</a></h3>
+<link rel="stylesheet" href="/css/style.css">
+<div class="image-text-container">
+    <div class="project-image">
+        <img src="/llvm-pass.png" width="" alt="pfind">
+    </div>
+    <div class="project-description">
+        <p>DISCO is a dependently typed string and runtime LLVM compiler pass that detects string formatting issues, such as typos. Whenever a string deviates from the expected pattern, the runtime will identify this as a mismatch. This helps reduce usability issues arising from cultural variations in input and output validation.</p>
+<p>Here is the <a href="https://github.com/davis-matthew/DISCO/blob/main/assets/final-report.pdf">paper</a> with more details.</p>
+
+    </div>
+</div>
+
+<h3 id="pfind----parallel-implementantion-of-linux-find-commandhttpsgithubcomkshpdrpfind"><a href="https://github.com/kshpdr/pfind">pfind &ndash; Parallel Implementantion of Linux find command</a><a hidden class="anchor" aria-hidden="true" href="#pfind----parallel-implementantion-of-linux-find-commandhttpsgithubcomkshpdrpfind">#</a></h3>
+<link rel="stylesheet" href="/css/style.css">
+<div class="image-text-container">
+    <div class="project-image">
+        <img src="/pfind.png" width="" alt="pfind">
+    </div>
+    <div class="project-description">
+        <p>In this project, we developed a parallel implementation of the <code>find</code> command using OpenMP. We also implemented a sequential version of the <code>find</code> command for comparison purposes, benchmarked our parallel implementation against the sequential one, and evaluated the performance difference.</p>
+<p>Here is the <a href="https://github.com/kshpdr/pfind/blob/main/paper.pdf">paper</a> and <a href="https://github.com/kshpdr/pfind/blob/main/presentation.pdf">presentation slides</a> with more details.</p>
+
+    </div>
+</div>
+
+<h3 id="svf-based-reachability-analysis-in-llvm-irhttpsgithubcomkshpdrreachability-analysis"><a href="https://github.com/kshpdr/reachability-analysis">SVF-Based Reachability Analysis in LLVM IR</a><a hidden class="anchor" aria-hidden="true" href="#svf-based-reachability-analysis-in-llvm-irhttpsgithubcomkshpdrreachability-analysis">#</a></h3>
 <link rel="stylesheet" href="/css/style.css">
 <div class="image-text-container">
     <div class="project-image">
@@ -318,18 +338,6 @@
             mybutton.style.opacity = "0";
         }
     };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
 
 </script>
 </body>
