@@ -182,6 +182,52 @@
                 opacity: 1;
             }
         }
+
+        /* Expandable p.s. section */
+        .ps-section {
+            margin-top: 24px;
+        }
+
+        .ps-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            user-select: none;
+            margin-bottom: 0;
+        }
+
+        .ps-toggle:hover .ps-arrow {
+            color: #666;
+        }
+
+        .ps-arrow {
+            font-size: 10px;
+            color: #ccc;
+            transition: transform 0.3s ease, color 0.2s ease;
+            display: inline-block;
+        }
+
+        .ps-toggle.expanded .ps-arrow {
+            transform: rotate(180deg);
+        }
+
+        .ps-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .ps-content.expanded {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 16px;
+        }
+
+        .ps-content p:last-child {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -214,13 +260,19 @@
 
         <p class="muted"><a href="https://github.com/kshpdr">github</a> · <a href="https://www.linkedin.com/in/deniskoshelev/">linkedin</a> · SF Bay Area</p>
 
-        <p class="muted">p.s.</p>
+        <div class="ps-section">
+            <div class="ps-toggle" id="psToggle">
+                <span class="muted">p.s.</span>
+                <span class="ps-arrow">▼</span>
+            </div>
+            <div class="ps-content" id="psContent">
+                <p>Regardless of my love for science and engineering, I was always the kind of kid who loved foreign languages, history, and social studies.</p>
 
-        <p>Regardless of my love for science and engineering, I was always the kind of kid who loved foreign languages, history, and social studies.</p>
+                <p>So, a fun fact about me — at age 18, I became a prize winner of the most prestigious national German language olympiad in my home country, placing in the top ~0.05% of participants from across the country (and passed the C2 language exam afterward).</p>
 
-        <p>So, a fun fact about me — at age 18, I became a prize winner of the most prestigious national German language olympiad in my home country, placing in the top ~0.05% of participants from across the country (and passed the C2 language exam afterward).</p>
-
-        <p>Regardless of all those cool titles, my first job in Germany was fundraising — and oh God, this was a struggle. Turns out your C2 is nothing compared to an old-school German grandma you're trying to convince to donate some money to kids in Africa. But it was a fun experience.</p>
+                <p>Regardless of all those cool titles, my first job in Germany was fundraising — and oh God, this was a struggle. Turns out your C2 is nothing compared to an old-school German grandma you're trying to convince to donate some money to kids in Africa. But it was a fun experience.</p>
+            </div>
+        </div>
     </main>
 
     <script>
@@ -303,6 +355,15 @@
                     counter.classList.remove('visible');
                 }
             }
+        });
+
+        // P.S. section toggle
+        const psToggle = document.getElementById('psToggle');
+        const psContent = document.getElementById('psContent');
+
+        psToggle.addEventListener('click', () => {
+            psToggle.classList.toggle('expanded');
+            psContent.classList.toggle('expanded');
         });
     </script>
 </body>
