@@ -84,23 +84,11 @@
 
         a {
             color: inherit;
+            text-decoration: underline;
         }
 
-        .image-container {
-            margin: 32px 0;
-            display: flex;
-            gap: 24px;
-            align-items: flex-start;
-        }
-
-        .image-container img {
-            max-width: 200px;
-            height: auto;
-            flex-shrink: 0;
-        }
-
-        .image-text {
-            flex: 1;
+        a:hover {
+            color: #000;
         }
     </style>
 </head>
@@ -120,14 +108,7 @@
 
         <p>I love having a personal website. It's a canvas where I can create and do whatever I want — express and explore myself.</p>
 
-        <div class="image-container">
-            <img src="/bratislava.jpg" alt="Bratislava">
-            <div class="image-text">
-                <p>It all began from this picture from Bratislava I believe (which turned out to be quite different than portrayed in Eurotrip; funny enough it was literally a huge bus euro-trip for us as well). I don't remember what came first — domain or this picture — but regardless the website appeared.</p>
-            </div>
-        </div>
-
-        <p>In the university times I didn't have trouble of keeping it up to date. It was a straight-forward thing to do — you're hanging out in the <strong>Bib</strong> (in German <strong>library</strong> — what a beautiful word) doing assignments and quickly push an update, if there is one and you got a second.</p>
+        <p>It all began from <a href="/bratislava.jpg">this picture</a> from Bratislava I believe (which turned out to be quite different than portrayed in Eurotrip; funny enough it was literally a huge bus euro-trip for us as well). I don't remember what came first — domain or this picture — but regardless the website appeared. In the university times I didn't have trouble of keeping it up to date. It was a straight-forward thing to do — you're hanging out in the <strong>Bib</strong> (in German <strong>library</strong> — what a beautiful word) doing assignments and quickly push an update, if there is one and you got a second.</p>
 
         <p>However, after graduating, I had quite a struggle to go and get my website updated. Until recently! Now I just ran a bunch of cursor agents laying in my bed to go make changes and deploy stuff for me directly after merge. You might think: "Wow, what a useless waste of compute". I even might somewhat agree with you — but given that VC still pumps money, I'll keep my privilege of enjoying it for a fraction of a price. After this ends, we'll go and setup OpenClaw for those purpose (or whatever next hyped up agentic environment gonna be there at a time). The most important thing that now the friction to write whatever I want to write about is almost non-existent — and that's the most important part.</p>
     </main>
