@@ -86,7 +86,7 @@
 
         .recursive-link .wave-letter {
             display: inline-block;
-            animation: waveFloat 2.6s ease-in-out infinite;
+            animation: waveFloat 9s ease-in-out infinite;
             animation-delay: calc(var(--i) * 0.08s);
             will-change: transform;
         }
@@ -118,11 +118,17 @@
             100% {
                 transform: translateY(0);
             }
-            40% {
+            6% {
                 transform: translateY(-4px);
             }
-            70% {
+            12% {
                 transform: translateY(1px);
+            }
+            18% {
+                transform: translateY(-2px);
+            }
+            24% {
+                transform: translateY(0);
             }
         }
 
