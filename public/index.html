@@ -82,8 +82,13 @@
             cursor: pointer;
             position: relative;
             display: inline-block;
-            animation: gentleNudge 3.5s ease-in-out infinite;
-            animation-delay: 2s;
+        }
+
+        .recursive-link .wave-letter {
+            display: inline-block;
+            animation: waveFloat 2.6s ease-in-out infinite;
+            animation-delay: calc(var(--i) * 0.08s);
+            will-change: transform;
         }
 
         .recursive-link::after {
@@ -99,8 +104,8 @@
             transition: transform 0.3s ease;
         }
 
-        .recursive-link:hover {
-            animation: none;
+        .recursive-link:hover .wave-letter {
+            animation-play-state: paused;
         }
 
         .recursive-link:hover::after {
@@ -108,18 +113,22 @@
             transform-origin: left;
         }
 
-        @keyframes gentleNudge {
-            0%, 92%, 100% {
+        @keyframes waveFloat {
+            0%,
+            100% {
                 transform: translateY(0);
             }
-            94% {
-                transform: translateY(-2px);
+            40% {
+                transform: translateY(-4px);
             }
-            96% {
-                transform: translateY(0);
+            70% {
+                transform: translateY(1px);
             }
-            98% {
-                transform: translateY(-1px);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .recursive-link .wave-letter {
+                animation: none;
             }
         }
 
@@ -280,6 +289,16 @@
         const main = document.getElementById('main');
         const overlay = document.getElementById('zoomOverlay');
         const counter = document.getElementById('depthCounter');
+
+        const linkText = link.textContent;
+        link.textContent = '';
+        [...linkText].forEach((char, index) => {
+            const span = document.createElement('span');
+            span.className = 'wave-letter';
+            span.style.setProperty('--i', index);
+            span.textContent = char === ' ' ? '\u00a0' : char;
+            link.appendChild(span);
+        });
         
         // Get depth from URL
         const params = new URLSearchParams(window.location.search);
