@@ -4,6 +4,14 @@ url: "/and-creates/"
 summary: projects
 ---
 
+### [whatismybill.today — Household utility bill tracker](https://whatismybill.today)
+
+{{< image-and-text image="/whatismybill.png" alt="whatismybill.today utility bill dashboard" tags="Web, PostgreSQL, PDF, Hono, JWT" >}}
+I meant to share bills with my roommate Barney, but PG&E was a pain. So I vibe coded a little dashboard for us—we can go nuts with the numbers with no delays around Bay Area utility prices.
+
+Upload utility bill PDFs (e.g. PG&E), parse them into structured usage and cost data, and see a household dashboard: trends, breakdowns, and comparisons. The app supports accounts, multiple homes, bill history, optional read-only share links (e.g. for landlords), and a sample-data demo mode. Backend is Node (Hono) with PostgreSQL and JWT auth; PDFs are stored on disk and parsed server-side.
+{{< /image-and-text >}}
+
 ### [howisgt.life -- A mood-meter on Georgia Tech campus.](https://howisgt.life)
 
 {{< image-and-text image="/hot.png" alt="pfind" tags="AI, Hackathon, Sentiment Analysis" >}}
