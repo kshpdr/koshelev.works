@@ -1,0 +1,64 @@
+baseURL = 'https://koshelev.works/'
+languageCode = 'en-us'
+title = 'koshelev.works'
+theme = 'paper-mod'
+
+[[params.socialIcons]]
+name = "Telegram"
+url = "https://t.me/kshpdr"
+
+[[params.socialIcons]]
+name = "Email"
+url = "mailto:koshelev@gatech.edu"
+
+[[params.socialIcons]]
+name = "Github"
+url = "https://github.com/kshpdr"
+
+[[params.socialIcons]]
+name = "Linkedin"
+url = "https://www.linkedin.com/in/deniskoshelev/"
+
+[[params.socialIcons]]
+name = "CV"
+url = "https://koshelev.works/cv.pdf"
+
+[languages.en]
+languageName = "English"
+weight = 1
+[languages.en.params.homeInfoParams]
+Title = "I am Denis and..."
+Content = """I love working. That's why koshelev.works. This is my last name, by the way. 
+
+‎
+
+**Who am I?**
+
+I am currently studying computer science at the [Georgia Institute of Technology](https://gatech.edu) as a master's student. My current research interests include *compilers, programming languages, high-performance computing*, and the intersection of these fields with *deep learning*. I completed my bachelor's degree at the [Technical University of Berlin](https://tu.berlin), where my [bachelor thesis focused on heuristics for twin-width](https://koshelev.works/thesis.pdf), an algorithmic graph problem.
+
+‎
+
+**Work Experience**
+
+During my bachelor studies, I had the pleasure of working at [Check24](https://check24.de), the largest comparison portal in Germany, as a Software Engineer. Prior to that, I was involved with the [Fraunhofer Institute](https://www.fraunhofer.de/en.html), the largest applied research organization in Europe.
+
+‎
+
+I'll post here whatever I find interesting. You can find me on other plaforms too. However, I mainly use Telegram and Email. I am creating the biggest [russian-speaking community around the TU Berlin](https://tuberlin.ru). From time to time I contribute to open-source projects that I find interesting.
+
+‎
+
+Here is my [CV](https://koshelev.works/cv.pdf).
+"""
+
+[[languages.en.menu.main]]
+identifier = "reading"
+name = "reading"
+url = "/and-reads/"
+weight = 10
+
+[[languages.en.menu.main]]
+identifier = "projects"
+name = "projects"
+url = "/and-creates/"
+weight = 10
