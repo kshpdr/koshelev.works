@@ -4,6 +4,12 @@ url: "/and-creates/"
 summary: projects
 ---
 
+### [whatismybill.today — Household utility bill tracker](https://whatismybill.today)
+
+{{< image-and-text image="/whatismybill.png" alt="whatismybill.today utility bill dashboard" >}}
+I meant to share bills with my roommate Barney, but PG&E was a pain. So I made a little dashboard for us—we can go nuts with the numbers with no delays around Bay Area utility prices.
+{{< /image-and-text >}}
+
 ### [howisgt.life -- A mood-meter on Georgia Tech campus.](https://howisgt.life)
 
 {{< image-and-text image="/hot.png" alt="pfind" tags="AI, Hackathon, Sentiment Analysis" >}}
