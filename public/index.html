@@ -30,20 +30,15 @@
             font-size: 11px;
             color: #ccc;
             font-family: monospace;
-            max-height: 0;
-            overflow: hidden;
-            margin-bottom: 0;
+            margin-bottom: 8px;
             opacity: 0;
             transform: translateY(-4px);
-            transition: opacity 0.3s ease, transform 0.3s ease,
-                        max-height 0.3s ease, margin-bottom 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .depth-counter.visible {
             opacity: 1;
             transform: translateY(0);
-            max-height: 2em;
-            margin-bottom: 8px;
         }
 
         header {
@@ -277,7 +272,6 @@
         </div>
     </main>
 
-    <script src="/nav.js" defer></script>
     <script>
         const link = document.getElementById('recursiveLink');
         const main = document.getElementById('main');
