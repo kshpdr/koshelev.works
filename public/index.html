@@ -30,15 +30,20 @@
             font-size: 11px;
             color: #ccc;
             font-family: monospace;
-            margin-bottom: 8px;
+            max-height: 0;
+            overflow: hidden;
+            margin-bottom: 0;
             opacity: 0;
             transform: translateY(-4px);
-            transition: all 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease,
+                        max-height 0.3s ease, margin-bottom 0.3s ease;
         }
 
         .depth-counter.visible {
             opacity: 1;
             transform: translateY(0);
+            max-height: 2em;
+            margin-bottom: 8px;
         }
 
         header {
