@@ -49,6 +49,22 @@
             margin: 0 8px;
         }
 
+        .depth-counter {
+            font-size: 11px;
+            color: #ccc;
+            font-family: monospace;
+            max-height: 0;
+            overflow: hidden;
+            margin-bottom: 0;
+            opacity: 0;
+        }
+
+        .depth-counter.visible {
+            opacity: 1;
+            max-height: 2em;
+            margin-bottom: 8px;
+        }
+
         .back {
             display: block;
             margin-bottom: 48px;
@@ -106,6 +122,7 @@
 </head>
 <body>
     <main>
+        <div class="depth-counter" id="depthCounter"></div>
         <header>
             <a href="/">koshelev.works</a>
             <span class="sep">/</span>
@@ -148,5 +165,19 @@
         <div class="book"><span class="book-title">Brave New World</span> <span class="book-author">— Huxley</span></div>
         <div class="book"><span class="book-title">1984</span> <span class="book-author">— Orwell</span></div>
     </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const depth = parseInt(params.get('d') || '0');
+        if (depth > 0) {
+            const counter = document.getElementById('depthCounter');
+            counter.textContent = `depth ${depth}`;
+            counter.classList.add('visible');
+            document.querySelectorAll('header a').forEach(a => {
+                const url = new URL(a.href, window.location.origin);
+                url.searchParams.set('d', depth);
+                a.href = url.toString();
+            });
+        }
+    </script>
 </body>
 </html>
