@@ -49,6 +49,22 @@
             margin: 0 8px;
         }
 
+        .depth-counter {
+            font-size: 11px;
+            color: #ccc;
+            font-family: monospace;
+            max-height: 0;
+            overflow: hidden;
+            margin-bottom: 0;
+            opacity: 0;
+        }
+
+        .depth-counter.visible {
+            opacity: 1;
+            max-height: 2em;
+            margin-bottom: 8px;
+        }
+
         .back {
             display: block;
             margin-bottom: 48px;
@@ -94,6 +110,7 @@
 </head>
 <body>
     <main>
+        <div class="depth-counter" id="depthCounter"></div>
         <header>
             <div>
                 <a href="/">koshelev.works</a>
@@ -113,5 +130,19 @@
 
         <p>However, after graduating, I had quite a struggle to go and get my website updated. Until recently! Now I just run a bunch of cursor agents laying in my bed to go make changes and deploy stuff for me directly after merge. You might think: <em>"Wow, what a useless waste of compute"</em>. I even might somewhat agree with you — but given that VC still pumps money, I'll keep my privilege of enjoying it for a fraction of a price. After this ends, we'll go and set up OpenClaw for those purposes (or whatever next hyped up agentic environment gonna be there at a time). The most important thing is that now the friction to write whatever I want to write about is almost non-existent — so I can keep staying awake instead of finally going to sleep. I'll go after this one, I promise (you can check commit history and see whether I stuck to it..).</p>
     </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const depth = parseInt(params.get('d') || '0');
+        if (depth > 0) {
+            const counter = document.getElementById('depthCounter');
+            counter.textContent = `depth ${depth}`;
+            counter.classList.add('visible');
+            document.querySelectorAll('header a').forEach(a => {
+                const url = new URL(a.href, window.location.origin);
+                url.searchParams.set('d', depth);
+                a.href = url.toString();
+            });
+        }
+    </script>
 </body>
 </html>
